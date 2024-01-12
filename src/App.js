@@ -6,7 +6,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import { default as Home } from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+
 import Error from "./pages/Error";
 
 function App() {
@@ -30,8 +33,12 @@ const MainContent = () => {
     switch (true) {
       case pathname === "/":
         return "Home";
-        case pathname === "/contact":
-          return "Contact";
+      case pathname === "/about":
+        return "About";
+      case pathname === "/services":
+        return "Services";
+      case pathname === "/contact":
+        return "Contact";
       default:
         return "Error 404";
     }
@@ -41,6 +48,8 @@ const MainContent = () => {
     <>
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>

@@ -6,11 +6,36 @@ import Logo from "../../src/assets/images/logo.png";
 import { HiOutlineBars2 } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
 
+import facebook from "../assets/images/facebook.png";
+import instagram from "../assets/images/instagram.png";
+
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
 ];
+
+const mobileNavigation = {
+  menu: [
+    { name: "Home", href: "/" },
+    { name: "our services", href: "/services" },
+    { name: "testimonials", href: "/testimonials" },
+    { name: "about us", href: "/about" },
+    { name: "get in touch", href: "/contact" },
+  ],
+  social: [
+    {
+      name: "facebook",
+      href: "#",
+      icon: facebook,
+    },
+    {
+      name: "instagram",
+      href: "#",
+      icon: instagram,
+    },
+  ],
+};
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,7 +66,7 @@ export default function Header() {
             />
           </NavLink>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex md:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -54,8 +79,8 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Popover.Group className="hidden lg:flex lg:gap-x-4 items-center">
+        <div className="hidden md:flex md:flex-1 md:justify-end">
+          <Popover.Group className="hidden md:flex md:gap-x-4 items-center">
             {navigation.map((item) => (
               <NavLink
                 to={item.href}
@@ -76,7 +101,7 @@ export default function Header() {
           <NavLink
             rel="noreferrer"
             to="/contact"
-            className="ml-5 lowercase py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-red-700 lg:font-medium "
+            className="ml-5 lowercase py-2 px-5 lg:px-6 text-base md:px-3 md:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-red-700 lg:font-medium "
           >
             Contact us
           </NavLink>
@@ -84,12 +109,12 @@ export default function Header() {
       </nav>
       <Dialog
         as="div"
-        className="lg:hidden"
+        className="md:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
         {/* <div className="fixed inset-0 z-10" /> */}
-        <Dialog.Panel className="bg-mainBlack fixed inset-y-0 right-0 z-10 w-full overflow-y-auto drop-shadow-md h-fit px6 py6 sm:ring-1 sm:ring-yellow">
+        <Dialog.Panel className="bg-mainBlack fixed inset-y-0 right-0 z-10 w-full overflow-y-auto h-full sm:ring-1 sm:ring-yellow">
           <div className="flex px-6 py-4 items-center justify-end z-[900]">
             <button
               type="button"
@@ -104,16 +129,16 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 ">
-              <div className="space-y-2 py-6 px-6">
-                {navigation.map((item) => (
+              <div className="space-y-2 w-full py-6 px-6">
+                {mobileNavigation.menu.map((item) => (
                   <Fragment key={item.name}>
                     <NavLink
                       to={item.href}
                       className={({ isActive }) => {
                         return (
-                          "-mx-3 block px3 py-2 text-base leading-7 w-full lowercase " +
+                          "-mx-3 block font-medium px-3 py-2 text-[25px] leading-6 w-full lowercase " +
                           (isActive
-                            ? "  text-yellow font-semibold"
+                            ? "  text-yellow "
                             : "text-white  hover:text-yellow")
                         );
                       }}
@@ -122,6 +147,33 @@ export default function Header() {
                     </NavLink>
                   </Fragment>
                 ))}
+              </div>
+              <NavLink
+                rel="noreferrer"
+                to="/contact"
+                className="ml-5 mt-6 lowercase py-2 px-5 lg:px-6 text-base md:px-3 md:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-red-700 lg:font-medium "
+              >
+                Contact us
+              </NavLink>
+              <div className="px-5 mt-4 py-2">
+                <h3 className="text-2xl font-semibold text-white tracking-wider">
+                  socials.
+                </h3>
+                <div className="mt-4 flex space-x-6">
+                  {mobileNavigation.social.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-white hover:text-lemonGreen"
+                    >
+                      <img
+                        className="w-[30px] h-[30px] "
+                        src={item.icon}
+                        alt={item.name}
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
