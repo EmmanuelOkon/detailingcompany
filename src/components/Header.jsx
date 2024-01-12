@@ -69,7 +69,7 @@ export default function Header() {
         <div className="flex md:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
             onClick={() => setMobileMenuOpen(true)}
           >
             <HiOutlineBars2
@@ -118,7 +118,7 @@ export default function Header() {
           <div className="flex px-6 py-4 items-center justify-end z-[900]">
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5"
               onClick={() => setMobileMenuOpen(false)}
             >
               <IoCloseCircleOutline

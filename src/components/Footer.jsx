@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
+import ellipse from "../assets/images/ellipse.png";
 
 const navigation = {
   solutions: [
@@ -31,8 +32,16 @@ const navigation = {
 
 const Footer = () => {
   return (
-    <footer className="bg-mainBlack" aria-labelledby="footer-heading">
-      <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <footer
+      className="bgmainBlack bg-[#0F0D0D] relative "
+      aria-labelledby="footer-heading"
+    >
+      <div className=" lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <img
+          src={ellipse}
+          alt="ellipse"
+          className="w-full md:w-[35%] h-auto absolute bottom-0 right-0 rotate-180"
+        />
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid md:grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols2 md:gap-4">
@@ -100,7 +109,11 @@ const Footer = () => {
                   href={item.href}
                   className="text-white hover:text-lemonGreen"
                 >
-                  <img className="w-[30px] h-[30px] " src={item.icon} alt={item.name} />
+                  <img
+                    className="w-[30px] h-[30px] "
+                    src={item.icon}
+                    alt={item.name}
+                  />
                 </a>
               ))}
             </div>

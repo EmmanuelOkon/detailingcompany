@@ -3,6 +3,7 @@ import diamond from "../../assets/images/diamonds.png";
 import rectangle from "../../assets/images/rectangle.png";
 import play from "../../assets/images/play.png";
 import dots from "../../assets/images/dotGrid.png";
+import ellipse from "../../assets/images/ellipseTwo.png";
 
 const servicesData = [
   {
@@ -29,18 +30,25 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="bg-mainBlack ">
-      <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div className="bg-mainBlack relative">
+      <div className=" lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <img
+          src={ellipse}
+          alt="ellipse"
+          className="w-full md:w-[35%] h-auto absolute top-0 right-0 rotate180"
+        />
         <div className="relative">
           <img
             src={dots}
             alt="dots"
             className="w-[10%] h-auto -top-10 -left-4 absolute"
           />
-          <h2 className="text-yellow text-[55px] relative ">our services</h2>
+          <h2 className="text-yellow text-[32px] md:text-[55px] relative ">
+            our services
+          </h2>
         </div>
         <div className=" py-5 wfull ">
-          <div className="w-full flex flex-col items-start lg:flex-row itemscenter lg  ">
+          <div className="w-full flex flex-col items-start lg:flex-row  lg  ">
             <div className="lg:w-2/3 grid md:grid-cols-2 gap4 py-4 pt-8 divide-x2 divide-y2 divide-[#524B4B]">
               {servicesData.map((data) => (
                 <div

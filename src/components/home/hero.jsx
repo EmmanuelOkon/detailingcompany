@@ -9,16 +9,20 @@ const Hero = () => {
       <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="w-full ">
           <div className="flex flex-col md:flex-row items-center justify-between ">
-            <img src={ellipse} alt="ellipse" className="w-[35%] h-auto absolute top-0 left-0" />
+            <img
+              src={ellipse}
+              alt="ellipse"
+              className="w-2/3 md:w-[35%] h-auto absolute top-0 left-0"
+            />
             <div className="w-full md:w-1/2 relative">
               <img
                 src={dots}
                 alt="dots"
                 className="w-[15%] h-auto top-0 -left-4 absolute"
               />
-              <h1 className=" text-yellow text-[55px] leading-none font-medium sm:text-6xl ">
+              <h1 className=" text-yellow text-[55px] leading-[1.2] md:leading-none font-medium sm:text-6xl ">
                 Detailing your car has never
-                <span className="text-white px-2 inline-flex">been </span>
+                <span className="text-white pr-1 md:px-2 inline-flex">been </span>
                 eiser.
               </h1>
               <p className="text-white mt-6 text-[16px] leading-normal lg:text-lg font-normal lg:leading-8">
@@ -28,7 +32,7 @@ const Hero = () => {
                 <button className=" py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% lg:font-medium ">
                   Our services
                 </button>
-                <button className="hidden border-2 border-white md:inline-flex ml-5 py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-white outline-none lg:font-medium">
+                <button className="hidden border-2 border-white hover:bg-yellow hover:text-black md:inline-flex ml-5 py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-white outline-none lg:font-medium">
                   Contact us
                 </button>
               </div>
