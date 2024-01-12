@@ -20,9 +20,11 @@ const Hero = () => {
                 alt="dots"
                 className="w-[15%] h-auto top-0 -left-4 absolute"
               />
-              <h1 className=" text-yellow text-[55px] leading-[1.2] md:leading-none font-medium sm:text-6xl ">
+              <h1 className="heroText text-yellow text-[55px] md:text-5xl lg:text-7xl  leading-[1.2] md:leading-none font-medium ">
                 Detailing your car has never
-                <span className="text-white pr-1 md:px-2 inline-flex">been </span>
+                <span className="heroText text-white pr-1 lg:px2 inline-flex">
+                  been
+                </span>
                 eiser.
               </h1>
               <p className="text-white mt-6 text-[16px] leading-normal lg:text-lg font-normal lg:leading-8">

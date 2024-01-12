@@ -45,8 +45,7 @@ const Testimonials = () => {
                 </p>
               </div>
               <p
-                
-                className={`w[340px] h-auto h[230px] lg:w-[330px] lg:h[235px] md:w[271px] md:h[194px] text-white text-[20px] p-6 rounded-[50px] ${
+                className={`h-auto lg:w-[330px] text-white text-[20px] p-6 rounded-[50px] ${
                   index === 1 ? "testimonalBg" : ""
                 }`}
                 style={{

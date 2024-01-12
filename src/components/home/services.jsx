@@ -29,6 +29,10 @@ const servicesData = [
 ];
 
 const Services = () => {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
+
   return (
     <div className="bg-mainBlack relative">
       <div className=" lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -48,14 +52,20 @@ const Services = () => {
           </h2>
         </div>
         <div className=" py-5 wfull ">
-          <div className="w-full flex flex-col items-start lg:flex-row  lg  ">
-            <div className="lg:w-2/3 grid md:grid-cols-2 gap4 py-4 pt-8 divide-x2 divide-y2 divide-[#524B4B]">
-              {servicesData.map((data) => (
+          <div className="w-full flex flex-col items-start lg:flex-row">
+            <div className="lg:w-2/3 grid md:grid-cols-2 gap4 py-4 pt-8 relative">
+              {servicesData.map((data, index) => (
                 <div
                   key={data.title}
-                  className="px-3 lg:px-0 flex flex-row items-start lg:h-[170px]  "
+                  className={`px-3 lg:px-0 flex flex-row items-start lg:h-[170px] ${
+                    index % 2 === 0 ? " md:border-[#524B4B] md:border-r " : ""
+                  } ${
+                    index < servicesData.length - 2
+                      ? "md:border-b md:border-[#524B4B]"
+                      : "md:pt-5"
+                  } `}
                 >
-                  <div className="flex items-center mr-4">
+                  <div className={`"flex items-center mr-4 ${index % 2 === 0 ? "" : "md:pl-5"} `}>
                     <img
                       className="text-4xl font-bold text-green"
                       src={data.image}
@@ -72,6 +82,8 @@ const Services = () => {
                   </div>
                 </div>
               ))}
+              {/* <div className="absolute inset-y-0 inset-x-0 h-full w-0.5 bg-[#524B4B]"></div>
+              <div className="absolute inset-y-auto inset-x-0 w-full h-0.5 bg-[#524B4B]"></div> */}
             </div>
             <div className="w-full md:px-10 lg:h-[380px] lg:w-1/3 flex items-center justify-between lg:flex-col lg:justify-center lg:gap-6 lg:items-start lg:align-middle ">
               <p className="hidden md:inline-flex max-w-[350px] lg:w-[270px] tracking-wide text-base lg:text-[20px] text-white py-4">

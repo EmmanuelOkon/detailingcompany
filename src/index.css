@@ -64,7 +64,10 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
 }
 
+.heroText {
+  word-spacing: 3px;
+}
+
 .testimonalBg {
   background: linear-gradient(to bottom right, #FFD613 5%, #8E780D 90%) !important;
-
 }

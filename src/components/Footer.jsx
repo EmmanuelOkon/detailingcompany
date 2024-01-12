@@ -42,8 +42,8 @@ const Footer = () => {
           alt="ellipse"
           className="w-full md:w-[35%] h-auto absolute bottom-0 right-0 rotate-180"
         />
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="grid md:grid-cols-2 gap-8 xl:col-span-2">
+        <div className="xl:grid xl:grid-cols-2 xl:gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols2 md:gap-4">
               <div>
                 <NavLink to="/">
@@ -57,7 +57,7 @@ const Footer = () => {
                 </NavLink>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8">
               <div className="mt-12 md:mt-0">
                 <h3 className="text-2xl font-semibold text-white tracking-wider">
                   menu.
@@ -96,26 +96,26 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-white tracking-wider">
-              follow us.
-            </h3>
-            <div className="mt-4 flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-white hover:text-lemonGreen"
-                >
-                  <img
-                    className="w-[30px] h-[30px] "
-                    src={item.icon}
-                    alt={item.name}
-                  />
-                </a>
-              ))}
+              <div>
+                <h3 className="text-2xl font-semibold text-white tracking-wider">
+                  follow us.
+                </h3>
+                <div className="mt-4 flex space-x-6">
+                  {navigation.social.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-white hover:text-lemonGreen"
+                    >
+                      <img
+                        className="w-[30px] h-[30px] "
+                        src={item.icon}
+                        alt={item.name}
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
