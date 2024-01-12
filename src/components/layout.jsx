@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import Header from "./Header";
 import Footer from "./Footer";
-import "@fontsource/poppins";
 
 const Layout = ({ children }) => {
   return (
