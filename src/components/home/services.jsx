@@ -73,7 +73,7 @@ const Services = () => {
                 </div>
               ))}
             </div>
-            <div className="w-full lg:h-[380px] lg:w-1/3 flex items-center justify-between lg:flex-col lg:justify-center lg:gap-6 lg:items-start lg:align-middle ">
+            <div className="w-full md:px-10 lg:h-[380px] lg:w-1/3 flex items-center justify-between lg:flex-col lg:justify-center lg:gap-6 lg:items-start lg:align-middle ">
               <p className="hidden md:inline-flex max-w-[350px] lg:w-[270px] tracking-wide text-base lg:text-[20px] text-white py-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>

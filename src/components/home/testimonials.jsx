@@ -15,8 +15,8 @@ const testimonialData = [
     name: "Matthew Age",
     description:
       "I cannot praise Mat highly enough for his hard work, passion and enthusiasm in the way he dealt with my car.",
-    // backgroundColor: "#836D6D",
-    backgroundColor: "#FFD613",
+    backgroundColor: "testimonalBg",
+    // backgroundColor: "#FFD613",
     color: "#000",
   },
   {
@@ -36,16 +36,22 @@ const Testimonials = () => {
           testimonials
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 space-y-5 md:space-y-0 ">
-          {testimonialData.map((data) => (
+          {testimonialData.map((data, index) => (
             <div key={data.name} className="">
               <div className="flex w-full items-center pl-6 pb-4">
                 <img src={data.icon} alt="user" className="w-[32px] h-auto " />
-                <p className="text-white text-[20px] lg:text-[26px] pl-3">{data.name}</p>
+                <p className="text-white text-[20px] lg:text-[26px] pl-3">
+                  {data.name}
+                </p>
               </div>
               <p
-                className="w[340px] h-auto h[230px] lg:w-[330px] lg:h[235px] md:w[271px] md:h[194px] text-white text-[20px] p-6 rounded-[50px]"
+                
+                className={`w[340px] h-auto h[230px] lg:w-[330px] lg:h[235px] md:w[271px] md:h[194px] text-white text-[20px] p-6 rounded-[50px] ${
+                  index === 1 ? "testimonalBg" : ""
+                }`}
                 style={{
-                  backgroundColor: data.backgroundColor,
+                  backgroundColor:
+                    index === 1 ? "" : data.backgroundColor,
                   color: data.color,
                 }}
               >

@@ -32,14 +32,14 @@ const Hero = () => {
                 <button className=" py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% lg:font-medium ">
                   Our services
                 </button>
-                <button className="hidden border-2 border-white hover:bg-yellow hover:text-black md:inline-flex ml-5 py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-white outline-none lg:font-medium">
+                <button className="module hidden border-2 border-white hover:bg-yellow hover:text-black md:inline-flex ml-5 py-2 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-white outline-none lg:font-medium">
                   Contact us
                 </button>
               </div>
             </div>
             <div className="lg:w-1/2 h-auto justify-center">
               <img
-                className="w[80%] rounded-lg md:rounded-2xl h-auto md:w[60%] lg:w-[600px] "
+                className="w[80%] rounded-lg md:rounded-2xl h-auto md:w-[400px] lg:w-[600px] "
                 src={heroImage}
                 alt="heroImage"
               />
