@@ -29,10 +29,6 @@ const servicesData = [
 ];
 
 const Services = () => {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
-
   return (
     <div className="bg-mainBlack relative">
       <div className=" lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">

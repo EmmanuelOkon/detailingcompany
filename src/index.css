@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
   border-width: 2px;
   border-radius: 100px !important;
   border-style: solid;
-  border-color: linear-gradient(to right, #FFD613, #8E780D);
+  border-color: linear-gradient(to right, #ffd613, #8e780d);
   box-sizing: border-box;
 }
 
@@ -68,6 +68,20 @@ body::-webkit-scrollbar-thumb {
   word-spacing: 3px;
 }
 
+/* Testimonial with gradient background */
 .testimonalBg {
-  background: linear-gradient(to bottom right, #FFD613 5%, #8E780D 90%) !important;
+  background: linear-gradient(
+    to bottom right,
+    #ffd613 5%,
+    #8e780d 90%
+  ) !important;
+}
+
+/* Testimonial triangle */
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
 }

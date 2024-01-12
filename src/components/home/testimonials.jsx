@@ -16,7 +16,7 @@ const testimonialData = [
     description:
       "I cannot praise Mat highly enough for his hard work, passion and enthusiasm in the way he dealt with my car.",
     backgroundColor: "testimonalBg",
-    // backgroundColor: "#FFD613",
+    
     color: "#000",
   },
   {
@@ -37,8 +37,8 @@ const Testimonials = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 space-y-5 md:space-y-0 ">
           {testimonialData.map((data, index) => (
-            <div key={data.name} className="">
-              <div className="flex w-full items-center pl-6 pb-4">
+            <div key={data.name} className="relative">
+              <div className="flex w-full items-center pl-10 pb-7">
                 <img src={data.icon} alt="user" className="w-[32px] h-auto " />
                 <p className="text-white text-[20px] lg:text-[26px] pl-3">
                   {data.name}
@@ -49,13 +49,26 @@ const Testimonials = () => {
                   index === 1 ? "testimonalBg" : ""
                 }`}
                 style={{
-                  backgroundColor:
-                    index === 1 ? "" : data.backgroundColor,
+                  backgroundColor: index === 1 ? "" : data.backgroundColor,
                   color: data.color,
                 }}
               >
                 "{data.description}"
               </p>
+              <div
+                className={`top-10 left-8 w-full`}
+                style={{
+                  position: "absolute",
+                  width: 0,
+                  height: 0,
+                  borderLeft: "20px solid transparent",
+                  borderRight: "20px solid transparent",
+                  borderBottom:
+                    index === 1
+                      ? `35px solid #ffd613`
+                      : `35px solid ${data.backgroundColor}`,
+                }}
+              ></div>
             </div>
           ))}
         </div>
