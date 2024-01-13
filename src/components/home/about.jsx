@@ -1,13 +1,24 @@
 import React from "react";
 import aboutPeople from "../../assets/images/aboutPeople.png";
+import dotGrid from "../../assets/images/dotGrid.png";
+import dotGridMob from "../../assets/images/dotGridMob.png";
 
 const About = () => {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div className="bg[#2C2F33] bgmainBlack bg-black ">
       <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <h2 className="text-yellow text-[32px] md:text-[55px] pb-16 ">
           about us
         </h2>
+        <div className="relative w-[120px] ">
+          <img
+            src={isMobile ? dotGridMob : dotGrid}
+            alt="dots"
+            className="w-2/3 h-auto bottom-20 md:bottom-24 left-[30%] transform -translate-x-1/2 absolute"
+          />
+        </div>
         <div className="md:flex flex-col items-center md:flex-row ">
           <div className="pb-6 border-b md:border-b-0 md:border-r border-[#453636] w-fit pr-5 ">
             <img

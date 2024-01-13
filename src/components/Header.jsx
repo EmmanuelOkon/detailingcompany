@@ -101,7 +101,7 @@ export default function Header() {
           <NavLink
             rel="noreferrer"
             to="/contact"
-            className="ml-5 lowercase py-2 px-5 lg:px-6 text-base md:px-3 md:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-red-700 lg:font-medium "
+            className="ml-5 lowercase py-2 px-5 lg:px-6 text-base md:px-3 md:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% hover:text-white lg:font-medium "
           >
             Contact us
           </NavLink>

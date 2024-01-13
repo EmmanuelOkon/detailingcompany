@@ -2,7 +2,8 @@ import React from "react";
 import diamond from "../../assets/images/diamonds.png";
 import rectangle from "../../assets/images/rectangle.png";
 import play from "../../assets/images/play.png";
-import dots from "../../assets/images/dotGrid.png";
+import dotGrid from "../../assets/images/dotGrid.png";
+import dotGridMob from "../../assets/images/dotGridMob.png";
 import ellipse from "../../assets/images/ellipseTwo.png";
 
 const servicesData = [
@@ -29,6 +30,8 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div className="bg-mainBlack relative">
       <div className=" lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -37,15 +40,15 @@ const Services = () => {
           alt="ellipse"
           className="w-full md:w-[35%] h-auto absolute top-0 right-0 rotate180"
         />
-        <div className="relative">
+        <h2 className="text-yellow text-[32px] md:text-[55px] relative ">
+          our services
+        </h2>
+        <div className="relative w-[120px] ">
           <img
-            src={dots}
+            src={isMobile ? dotGridMob : dotGrid}
             alt="dots"
-            className="w-[10%] h-auto -top-10 -left-4 absolute"
+            className="w-2/3 h-auto bottom-4 md:bottom-8 left-[30%] transform -translate-x-1/2 absolute"
           />
-          <h2 className="text-yellow text-[32px] md:text-[55px] relative ">
-            our services
-          </h2>
         </div>
         <div className=" py-5 wfull ">
           <div className="w-full flex flex-col items-start lg:flex-row">
@@ -61,7 +64,11 @@ const Services = () => {
                       : "md:pt-5"
                   } `}
                 >
-                  <div className={`"flex items-center mr-4 ${index % 2 === 0 ? "" : "md:pl-5"} `}>
+                  <div
+                    className={`"flex items-center mr-4 ${
+                      index % 2 === 0 ? "" : "md:pl-5"
+                    } `}
+                  >
                     <img
                       className="text-4xl font-bold text-green"
                       src={data.image}
@@ -78,15 +85,13 @@ const Services = () => {
                   </div>
                 </div>
               ))}
-              {/* <div className="absolute inset-y-0 inset-x-0 h-full w-0.5 bg-[#524B4B]"></div>
-              <div className="absolute inset-y-auto inset-x-0 w-full h-0.5 bg-[#524B4B]"></div> */}
             </div>
             <div className="w-full md:px-10 lg:h-[380px] lg:w-1/3 flex items-center justify-between lg:flex-col lg:justify-center lg:gap-6 lg:items-start lg:align-middle ">
               <p className="hidden md:inline-flex max-w-[350px] lg:w-[270px] tracking-wide text-base lg:text-[20px] text-white py-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
-              <button className="w-fit flex items-center gap-3 py-3 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% lg:font-medium ">
-                Get in touch <img src={play} alt="play" />
+              <button className="z-[100] w-fit flex items-center gap-3 py-3 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% lg:font-medium hover:text-white ">
+                Get in touch <img className="" src={play} alt="play" />
               </button>
             </div>
           </div>

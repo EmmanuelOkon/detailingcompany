@@ -3,6 +3,8 @@ import MailIcon from "../../assets/images/email.png";
 import PhoneIcon from "../../assets/images/phone.png";
 import LocationIcon from "../../assets/images/location.png";
 import play from "../../assets/images/play.png";
+import dotGrid from "../../assets/images/dotGrid.png";
+import dotGridMob from "../../assets/images/dotGridMob.png";
 
 const contact = [
   {
@@ -24,12 +26,20 @@ const contact = [
 ];
 
 const Contact = () => {
+  const isMobile = window.innerWidth <= 768;
   return (
     <div className="bg-mainBlack ">
       <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px8">
         <h2 className="text-yellow text-[32px] md:text-[55px] pb-16 ">
           get in touch
         </h2>
+        <div className="relative w-[120px] ">
+          <img
+            src={isMobile ? dotGridMob : dotGrid}
+            alt="dots"
+            className="w-2/3 h-auto bottom-20 md:bottom-24 left-[30%] transform -translate-x-1/2 absolute"
+          />
+        </div>
         <div className="grid sm:grid sm:grid-cols-2 lg:gap-8 rounded-3xl lg:grid-cols-2">
           <div className="lg:p-10 w-full  ">
             <form action="/" className="wfull">
@@ -70,7 +80,7 @@ const Contact = () => {
                 ></textarea>
                 <button
                   type="button"
-                  className="flex items-center gap-3 py-3 mt-5 lg:mt-7 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% lg:font-medium "
+                  className="hover:text-white flex items-center gap-3 py-3 mt-5 lg:mt-7 px-5 lg:px-6 text-base md:px-3 md:text-xs lg:text-lg font-medium rounded-full text-black bg-gradient-to-br from-yellow from-5% to-[#8E780D] to-90% outline-none hover:bg-gradient-to-tr hover:from-yellow hover:from-5% hover:to-[#8E780D] hover:to-90% lg:font-medium "
                 >
                   Send message <img src={play} alt="play" />
                 </button>
