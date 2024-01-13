@@ -29,7 +29,7 @@ const Contact = () => {
   const isMobile = window.innerWidth <= 768;
   return (
     <div className="bg-mainBlack ">
-      <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px8">
+      <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <h2 className="text-yellow text-[32px] md:text-[55px] pb-16 ">
           get in touch
         </h2>
